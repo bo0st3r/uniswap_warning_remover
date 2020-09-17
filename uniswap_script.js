@@ -15,13 +15,13 @@
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    let btn, i=0;
+    var btn, i=0;
 
     // Loops every 200ms until the button is found (because it is displayed after page has loaded)
     // If no button is found after 30 tries, stops
-    while(!btn && i++ < 30){
+    while(!btn && i++ < 100){
         await wait(200).then(() => {
-            btn = document.querySelector('.fnFztX');
+            btn = document.querySelector('.token-dismiss-button');
         });
     }
 
@@ -33,4 +33,6 @@
         checkBoxParent.click();
         btn.click();
     }
+
+    wait(150).then(() => {document.querySelector('.flLCKI').click()});
 })();
