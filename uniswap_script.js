@@ -33,6 +33,4 @@
         checkBoxParent.click();
         btn.click();
     }
-
-    wait(150).then(() => {document.querySelector('.flLCKI').click()});
 })();
